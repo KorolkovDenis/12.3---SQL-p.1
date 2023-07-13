@@ -14,8 +14,8 @@
 SELECT DISTINCT district FROM address WHERE district LIKE ‘K%a’ AND district NOT LIKE ‘% %’;
 ```
 
-![screen1](https://github.)
-![screen2](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen1.jpg)
+![screen2](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen2.jpg)
 
 ### Задание 2
 
@@ -36,8 +36,8 @@ WHERE amount  > 10.00 AND payment_date BETWEEN ‘2005-06-15’ AND ‘2005-06-1
 ORDER BY payment_date;
 ```
 
-![screen3](https://github.com/KorolkovDenis/)
-![screen4](https://github.com/KorolkovDenis/)
+![screen3](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen3.jpg)
+![screen4](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen4.jpg)
 
 ### Задание 3
 
@@ -52,8 +52,8 @@ FROM rental
 ORDER BY rental_date DESC
 LIMIT 5;
 ```
-![screen5](https://github.com/KorolkovDenis/)
-![screen6](https://github.com/KorolkovDenis/)
+![screen5](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen5.jpg)
+![screen6](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen6.jpg)
 
 ### Задание 4
 
@@ -72,7 +72,7 @@ FROM customer
 WHERE first_name = ‘Kelly’ OR first_name = ‘Willie’;
 ```
 
-![screen7](https://github.com/KorolkovDenis/)
+![screen7](https://github.com/KorolkovDenis/12.3---SQL-p.1/blob/main/screenshots/screen7.jpg)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
@@ -86,4 +86,4 @@ WHERE first_name = ‘Kelly’ OR first_name = ‘Willie’;
 Доработайте запрос из предыдущего задания, скорректируйте значения в новых колонках: первая буква должна быть заглавной, остальные — строчными.
 
 
-[Cсылка на google docs по «SQL. Часть 1»](https://docs.google.com/document/d/)
+[Cсылка на google docs по «SQL. Часть 1»](https://docs.google.com/document/d/13AT4C8GPjh7Rlsl9itqLUu3Clv-0KoII/edit?usp=drive_link&ouid=104113173630640462528&rtpof=true&sd=true)
