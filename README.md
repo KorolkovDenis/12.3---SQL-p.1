@@ -6,13 +6,54 @@
 
 Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a” и не содержат пробелов.
 
+Ответ:
+```
+Берем таблицу с адресами - address  district (район).
+Для уникальности названий используем DISTINCT.
+А также нам нужен будет предикат LIKE.
+SELECT DISTINCT district FROM address WHERE district LIKE ‘K%a’ AND district NOT LIKE ‘% %’;
+```
+
+![screen1](https://github.)
+![screen2](https://github.com/KorolkovDenis/)
+
 ### Задание 2
 
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года **включительно** и стоимость которых превышает 10.00.
 
+Ответ:
+
+Условие:
+```
+Таблица платежей – payment. 
+Payment_date 2005-06-15 по 2005-06-18 включительно. 
+amount > 10.00
+```
+```
+SELECT CAST (payment_date AS DATE), amount
+FROM payment
+WHERE amount  > 10.00 AND payment_date BETWEEN ‘2005-06-15’ AND ‘2005-06-19’
+ORDER BY payment_date;
+```
+
+![screen3](https://github.com/KorolkovDenis/)
+![screen4](https://github.com/KorolkovDenis/)
+
 ### Задание 3
 
 Получите последние пять аренд фильмов.
+
+Ответ:
+
+Из таблицы аренды rental:
+```
+SELECT rental_id, rental_date, inventory_id
+FROM rental
+ORDER BY rental_date DESC
+LIMIT 5;
+```
+![screen5](https://github.com/KorolkovDenis/)
+![screen6](https://github.com/KorolkovDenis/)
 
 ### Задание 4
 
@@ -21,6 +62,17 @@
 Сформируйте вывод в результат таким образом:
 - все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
 - замените буквы 'll' в именах на 'pp'.
+
+Ответ:
+
+От себя для ясности добавил фамилию и порядковый номер.
+```
+SELECT LOWER(first_name), REPLACE(first_name, ‘LL’, ‘pp’) last_name, customer_id
+FROM customer
+WHERE first_name = ‘Kelly’ OR first_name = ‘Willie’;
+```
+
+![screen7](https://github.com/KorolkovDenis/)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
@@ -32,3 +84,6 @@
 ### Задание 6*
 
 Доработайте запрос из предыдущего задания, скорректируйте значения в новых колонках: первая буква должна быть заглавной, остальные — строчными.
+
+
+[Cсылка на google docs по «SQL. Часть 1»](https://docs.google.com/document/d/)
